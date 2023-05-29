@@ -1,0 +1,20 @@
+Application 2
+
+Time Complexity:
+createDataSet O(n) - Initialize empty set and populate
+destroyDataSet O(1) - Free set
+searchID O(1) - Use student ID as index in array
+insertion O(1) - Use student ID as index in array and change to age
+deletion O(1) - Use student ID as index in array and change to 0
+
+Choices:
+For this application, I chose to use a hash table with the student IDs as indexes and age as the value.
+This is the most efficient because we are able to search in O(1) time through hashing. Since there are
+no collisions, we can guarantee that we are able to perform all of our functions in O(1) time. We can
+simply use age as an integer value and there's no reason to use structs, which also lets us destroy
+our data set in O(1) as opposed to O(n).
+
+If we were to instead have a set filled with each of the students, search and delete would take O(n)
+time because we would potentially need to search the entire data set in order to find the specific student.
+Destroying the data set would also take a much longer time with structs because we would have to free
+each individual student as opposed to just freeing our set.

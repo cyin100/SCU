@@ -1,0 +1,28 @@
+Application 1
+
+Time Complexity:
+createDataSet O(n) - Create empty lists and base node
+destroyDataSet O(n^2) - Free each node in each list and free lists
+searchAge O(n) - Return each node in specified age list
+insertion O(1) - Add node to end in specified age list
+deletion O(n) - Free every node in age list
+maxAgeGap O(1) - Return max age - min age (which are pointers)
+
+Choices:
+For this application, I chose to use a set containing linked lists for each age. Each student
+is represented as a node in a list that stores the array. This is the most efficient data structure
+because we are able to return all students with a given age or delete students with a given age 
+in O(n) time by traversing through the list. We are able to insert and find max age gap in O(1) time
+through simply adding on to the linkedlist without having to worry about the ID.
+
+If we used the hash table that we did in Application 2, we would need to run through every single
+student to search for age, which would take much longer (we can't just return the list for the
+specified age). Same goes for deletion in this case. Because the main function of this application
+is to have age as the most important function with student ID not being as important, we sort our
+values by their age as a higher level structure.
+
+The reason we use a linked list inside as opposed to a set is because it uses much less memory than
+a set because we don't need to create an empty array to account for other users. It also makes
+deletion very efficient as we simply traverse through the nodes and free all the values. Insertion 
+is also much more simple with O(1) time because we simply have to have the last node in the list
+point to the new student.
