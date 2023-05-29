@@ -1,4 +1,4 @@
-# COEN 79: Object Oriented Programming & Advanced Data Structures
+## COEN 79: Object Oriented Programming & Advanced Data Structures
 ### Spring 2023, Professor Farokh Eskafi
 
 **Lab 1:** Getting Started\

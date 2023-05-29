@@ -1,4 +1,4 @@
-# COEN 20: Intro to Embedded Systems
+## COEN 20: Intro to Embedded Systems
 ### Fall 2022, Professor Farokh Eskafi
 
 **Lab 1:** Interpreting Binary\

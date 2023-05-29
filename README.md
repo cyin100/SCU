@@ -1,4 +1,4 @@
-# SCU COEN Labs
+## SCU COEN Labs
 
 **COEN 12:** Abstract Data Types & Structures\
 **COEN 20:** Intro to Embedded Systems\

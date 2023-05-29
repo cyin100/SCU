@@ -1,4 +1,4 @@
-# COEN 12: Abstract Data Types & Structures
+## COEN 12: Abstract Data Types & Structures
 ### Winter 2022, Professor Xiang Li
 
 **Lab 1:** Counting the Number of Words\

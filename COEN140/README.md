@@ -1,4 +1,4 @@
-# COEN 140: Machine Learning/Data Mining
+## COEN 140: Machine Learning/Data Mining
 ### Spring 2023, Professor David Anastasiu
 
 **Lab 1:** Getting Familiar with Python & Execution Environment\
@@ -9,3 +9,7 @@
 **Lab 6:** Ensemble Methods\
 **Lab 7:** K-Means Clustering\
 **Lab 8:** K Nearest Neighbour Search
+
+**Program 1:** Classification\
+**Program 2:** Regression\
+**Program 3:** Clustering
