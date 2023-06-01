@@ -1,16 +1,7 @@
-// FILE: deque_iterator.h
-// PROVIDES: A class for deque iterator (non-const)
-//
-// COEN 79
-//
-// FORWARD ITERATOR to step through the items of a deque
-// A deque_iterator can change the underlying deque list through the
-// * operator.
-// WARNING:
-// This classes use std::iterator as its base class;
-// Older compilers that do not support the std::iterator class can
-// delete everything after the word iterator
-
+// FILE: dequeiterator.h
+// Conner Yin & Nathan Yu
+// COEN 79 Lab 8
+// 6/1/2023
 
 #ifndef deque_iterator_h
 #define deque_iterator_h
@@ -69,9 +60,13 @@ namespace coen79_lab8
         bool operator ==(const deque_iterator other) const
         {
             // STUDENT WORK...
+            return(block_pointers == other.block_pointers && block_pointers_end == other.block_pointers_end
+                   && first_bp == other.first_bp && last_bp == other.last_bp
+                   && front_ptr == other.front_ptr && back_ptr == other.back_ptr
+                   && bp_array_size == other.bp_array_size && block_size == other.block_size
+                   && cursor == other.cursor && current_boundary == other.current_boundary && current_block_pointer == other.current_block_pointer);
             
         }
-        
         
         // MODIFICATION MEMBER FUNCTIONS
         deque_iterator& operator ++( ) // Prefix ++
@@ -94,12 +89,17 @@ namespace coen79_lab8
             if (cursor == current_boundary)
             {
                 // STUDENT WORK...
+                current_block_pointer++;
+                cursor = *current_block_pointer;
+                current_boundary = *current_block_pointer + (block_size - 1);
+                return *this;
 
             }
             // Move forward
             else
             {
                 // STUDENT WORK...
+                cursor++;
 
             }
             
@@ -129,12 +129,16 @@ namespace coen79_lab8
             if (cursor == current_boundary)
             {
                 // STUDENT WORK...
+                current_block_pointer++;
+                cursor = *current_block_pointer;
+                current_boundary = *current_block_pointer + (block_size - 1);
 
             }
             // Move forward
             else
             {
                 // STUDENT WORK...
+                cursor++;
 
             }
             

@@ -50,6 +50,7 @@
         "set": "cpp",
         "algorithm": "cpp",
         "fstream": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "vector": "cpp"
     }
 }
