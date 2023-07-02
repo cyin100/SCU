@@ -11,7 +11,7 @@
 **Lab 5:** Evaluate Logistic Regression Model with Dimensionality Reduction Techniques\
 **Lab 6:** Ensemble Methods\
 **Lab 7:** K-Means Clustering\
-**Lab 8:** K Nearest Neighbour Search
+**Lab 8:** K Nearest Neighbour Search\
 **Program 1:** Classification\
 **Program 2:** Regression\
 **Program 3:** Clustering
