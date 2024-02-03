@@ -6,4 +6,7 @@ This repository serves as a record of my Computer Science & Engineering labs at 
 **COEN 12:** Abstract Data Types & Structures\
 **COEN 20:** Intro to Embedded Systems\
 **COEN 79:** Object Oriented Programming & Advanced Data Structures\
-**COEN 140:** Machine Learning/Data Mining
+**COEN 140:** Machine Learning/Data Mining\
+**COEN 146:** Computer Networks\
+**COEN 160:** Advanced Object Oriented Programming\
+**COEN 171:** Programming Languages

@@ -1,0 +1,17 @@
+INDEX VERSION 1.127+/DCNFS/users/student/chyin/COEN160/lab5/.metadata/.plugins/org.eclipse.jdt.core
+978653994.index
+3674481535.index
+2835072232.index
+4135212955.index
+3157158754.index
+3461679234.index
+696799666.index
+3024221933.index
+3317020165.index
+552283791.index
+1079354854.index
+3776630241.index
+407870514.index
+2907959398.index
+2877655955.index
+1992932879.index

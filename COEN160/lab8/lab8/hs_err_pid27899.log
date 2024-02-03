@@ -1,0 +1,728 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Cannot create GC thread. Out of system resources.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (gcTaskThread.cpp:48), pid=27899, tid=0x00007fc04620b700
+#
+# JRE version:  (8.0_382-b05) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.382-b05 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fc03c04c800):  JavaThread "Unknown thread" [_thread_in_vm, id=27905, stack(0x00007fc04610c000,0x00007fc04620c000)]
+
+Stack: [0x00007fc04610c000,0x00007fc04620c000],  sp=0x00007fc04620a7d0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xb69b7d]  VMError::report_and_die()+0x1cd
+V  [libjvm.so+0x50d64a]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0xaa
+V  [libjvm.so+0x5e57bf]  GCTaskThread::GCTaskThread(GCTaskManager*, unsigned int, unsigned int)+0x16f
+V  [libjvm.so+0x5e4f47]  GCTaskManager::initialize()+0x397
+V  [libjvm.so+0x96cea4]  ParallelScavengeHeap::initialize()+0x394
+V  [libjvm.so+0xb329d9]  Universe::initialize_heap()+0x159
+V  [libjvm.so+0xb32c82]  universe_init()+0x42
+V  [libjvm.so+0x649c1f]  init_globals()+0x6f
+V  [libjvm.so+0xb1501f]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x29f
+V  [libjvm.so+0x71caad]  JNI_CreateJavaVM+0x5d
+C  [libjli.so+0x3043]  JavaMain+0xa3
+C  [libpthread.so.0+0x7ea5]  start_thread+0xc5
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007fc03c04c800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=27905, stack(0x00007fc04610c000,0x00007fc04620c000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000003d5800000, size: 16040 MB, Compressed Oops mode: Non-zero based:0x00000003d57ff000, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+3d5800000-3ff580000 rw-p 00000000 00:00 0 
+3ff580000-671d80000 ---p 00000000 00:00 0 
+671d80000-686c00000 rw-p 00000000 00:00 0 
+686c00000-7c0000000 ---p 00000000 00:00 0 
+557070967000-557070968000 r-xp 00000000 103:03 68052983                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/bin/java
+557070b67000-557070b68000 r--p 00000000 103:03 68052983                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/bin/java
+557070b68000-557070b69000 rw-p 00001000 103:03 68052983                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/bin/java
+5570715f2000-557071613000 rw-p 00000000 00:00 0                          [heap]
+7fc02b75d000-7fc02ba1c000 rw-p 00000000 00:00 0 
+7fc02ba1c000-7fc02ba1d000 ---p 00000000 00:00 0 
+7fc02ba1d000-7fc02bc6c000 rw-p 00000000 00:00 0 
+7fc02bc6c000-7fc02d000000 ---p 00000000 00:00 0 
+7fc02d000000-7fc02d270000 rwxp 00000000 00:00 0 
+7fc02d270000-7fc03c000000 ---p 00000000 00:00 0 
+7fc03c000000-7fc03c089000 rw-p 00000000 00:00 0 
+7fc03c089000-7fc040000000 ---p 00000000 00:00 0 
+7fc0400a1000-7fc0400a2000 ---p 00000000 00:00 0 
+7fc0400a2000-7fc0401a2000 rw-p 00000000 00:00 0 
+7fc0401a2000-7fc0401a3000 ---p 00000000 00:00 0 
+7fc0401a3000-7fc0402a3000 rw-p 00000000 00:00 0 
+7fc0402a3000-7fc0402a4000 ---p 00000000 00:00 0 
+7fc0402a4000-7fc0403a4000 rw-p 00000000 00:00 0 
+7fc0403a4000-7fc0403a5000 ---p 00000000 00:00 0 
+7fc0403a5000-7fc0404a5000 rw-p 00000000 00:00 0 
+7fc0404a5000-7fc0404a6000 ---p 00000000 00:00 0 
+7fc0404a6000-7fc0405a6000 rw-p 00000000 00:00 0 
+7fc0405a6000-7fc0405a7000 ---p 00000000 00:00 0 
+7fc0405a7000-7fc0406a7000 rw-p 00000000 00:00 0 
+7fc0406a7000-7fc0406a8000 ---p 00000000 00:00 0 
+7fc0406a8000-7fc0407a8000 rw-p 00000000 00:00 0 
+7fc0407a8000-7fc0407a9000 ---p 00000000 00:00 0 
+7fc0407a9000-7fc0408a9000 rw-p 00000000 00:00 0 
+7fc0408a9000-7fc0408aa000 ---p 00000000 00:00 0 
+7fc0408aa000-7fc040af9000 rw-p 00000000 00:00 0 
+7fc040af9000-7fc041e8c000 ---p 00000000 00:00 0 
+7fc041e8c000-7fc041f34000 rw-p 00000000 00:00 0 
+7fc041f34000-7fc0428fe000 ---p 00000000 00:00 0 
+7fc0428fe000-7fc042909000 rw-p 00000000 00:00 0 
+7fc042909000-7fc042cbf000 ---p 00000000 00:00 0 
+7fc042cbf000-7fc042cc7000 r-xp 00000000 103:03 68086526                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libzip.so
+7fc042cc7000-7fc042ec6000 ---p 00008000 103:03 68086526                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libzip.so
+7fc042ec6000-7fc042ec7000 r--p 00007000 103:03 68086526                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libzip.so
+7fc042ec7000-7fc042ec8000 rw-p 00008000 103:03 68086526                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libzip.so
+7fc042ec8000-7fc042ed4000 r-xp 00000000 103:03 134476024                 /usr/lib64/libnss_ldap.so.2
+7fc042ed4000-7fc0430d3000 ---p 0000c000 103:03 134476024                 /usr/lib64/libnss_ldap.so.2
+7fc0430d3000-7fc0430d4000 r--p 0000b000 103:03 134476024                 /usr/lib64/libnss_ldap.so.2
+7fc0430d4000-7fc0430d5000 rw-p 0000c000 103:03 134476024                 /usr/lib64/libnss_ldap.so.2
+7fc0430d5000-7fc0430ec000 r-xp 00000000 103:03 134375431                 /usr/lib64/libnsl-2.17.so
+7fc0430ec000-7fc0432eb000 ---p 00017000 103:03 134375431                 /usr/lib64/libnsl-2.17.so
+7fc0432eb000-7fc0432ec000 r--p 00016000 103:03 134375431                 /usr/lib64/libnsl-2.17.so
+7fc0432ec000-7fc0432ed000 rw-p 00017000 103:03 134375431                 /usr/lib64/libnsl-2.17.so
+7fc0432ed000-7fc0432ef000 rw-p 00000000 00:00 0 
+7fc0432ef000-7fc0432f8000 r-xp 00000000 103:03 134375433                 /usr/lib64/libnss_compat-2.17.so
+7fc0432f8000-7fc0434f7000 ---p 00009000 103:03 134375433                 /usr/lib64/libnss_compat-2.17.so
+7fc0434f7000-7fc0434f8000 r--p 00008000 103:03 134375433                 /usr/lib64/libnss_compat-2.17.so
+7fc0434f8000-7fc0434f9000 rw-p 00009000 103:03 134375433                 /usr/lib64/libnss_compat-2.17.so
+7fc0434f9000-7fc043523000 r-xp 00000000 103:03 68086463                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libjava.so
+7fc043523000-7fc043722000 ---p 0002a000 103:03 68086463                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libjava.so
+7fc043722000-7fc043723000 r--p 00029000 103:03 68086463                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libjava.so
+7fc043723000-7fc043725000 rw-p 0002a000 103:03 68086463                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libjava.so
+7fc043725000-7fc043732000 r-xp 00000000 103:03 68086525                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libverify.so
+7fc043732000-7fc043931000 ---p 0000d000 103:03 68086525                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libverify.so
+7fc043931000-7fc043933000 r--p 0000c000 103:03 68086525                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libverify.so
+7fc043933000-7fc043934000 rw-p 0000e000 103:03 68086525                  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/libverify.so
+7fc043934000-7fc04393b000 r-xp 00000000 103:03 134475981                 /usr/lib64/librt-2.17.so
+7fc04393b000-7fc043b3a000 ---p 00007000 103:03 134475981                 /usr/lib64/librt-2.17.so
+7fc043b3a000-7fc043b3b000 r--p 00006000 103:03 134475981                 /usr/lib64/librt-2.17.so
+7fc043b3b000-7fc043b3c000 rw-p 00007000 103:03 134475981                 /usr/lib64/librt-2.17.so
+7fc043b3c000-7fc043b51000 r-xp 00000000 103:03 134299752                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fc043b51000-7fc043d50000 ---p 00015000 103:03 134299752                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fc043d50000-7fc043d51000 r--p 00014000 103:03 134299752                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fc043d51000-7fc043d52000 rw-p 00015000 103:03 134299752                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fc043d52000-7fc043e53000 r-xp 00000000 103:03 134375429                 /usr/lib64/libm-2.17.so
+7fc043e53000-7fc044052000 ---p 00101000 103:03 134375429                 /usr/lib64/libm-2.17.so
+7fc044052000-7fc044053000 r--p 00100000 103:03 134375429                 /usr/lib64/libm-2.17.so
+7fc044053000-7fc044054000 rw-p 00101000 103:03 134375429                 /usr/lib64/libm-2.17.so
+7fc044054000-7fc04413d000 r-xp 00000000 103:03 134375472                 /usr/lib64/libstdc++.so.6.0.19
+7fc04413d000-7fc04433d000 ---p 000e9000 103:03 134375472                 /usr/lib64/libstdc++.so.6.0.19
+7fc04433d000-7fc044345000 r--p 000e9000 103:03 134375472                 /usr/lib64/libstdc++.so.6.0.19
+7fc044345000-7fc044347000 rw-p 000f1000 103:03 134375472                 /usr/lib64/libstdc++.so.6.0.19
+7fc044347000-7fc04435c000 rw-p 00000000 00:00 0 
+7fc04435c000-7fc0450fe000 r-xp 00000000 103:03 1708300                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/server/libjvm.so
+7fc0450fe000-7fc0452fd000 ---p 00da2000 103:03 1708300                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/server/libjvm.so
+7fc0452fd000-7fc0453ab000 r--p 00da1000 103:03 1708300                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/server/libjvm.so
+7fc0453ab000-7fc0453d6000 rw-p 00e4f000 103:03 1708300                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/jre/lib/amd64/server/libjvm.so
+7fc0453d6000-7fc04540c000 rw-p 00000000 00:00 0 
+7fc04540c000-7fc0455d0000 r-xp 00000000 103:03 134375421                 /usr/lib64/libc-2.17.so
+7fc0455d0000-7fc0457cf000 ---p 001c4000 103:03 134375421                 /usr/lib64/libc-2.17.so
+7fc0457cf000-7fc0457d3000 r--p 001c3000 103:03 134375421                 /usr/lib64/libc-2.17.so
+7fc0457d3000-7fc0457d5000 rw-p 001c7000 103:03 134375421                 /usr/lib64/libc-2.17.so
+7fc0457d5000-7fc0457da000 rw-p 00000000 00:00 0 
+7fc0457da000-7fc0457dc000 r-xp 00000000 103:03 134375427                 /usr/lib64/libdl-2.17.so
+7fc0457dc000-7fc0459dc000 ---p 00002000 103:03 134375427                 /usr/lib64/libdl-2.17.so
+7fc0459dc000-7fc0459dd000 r--p 00002000 103:03 134375427                 /usr/lib64/libdl-2.17.so
+7fc0459dd000-7fc0459de000 rw-p 00003000 103:03 134375427                 /usr/lib64/libdl-2.17.so
+7fc0459de000-7fc0459ec000 r-xp 00000000 103:03 140232122                 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/lib/amd64/jli/libjli.so
+7fc0459ec000-7fc045beb000 ---p 0000e000 103:03 140232122                 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/lib/amd64/jli/libjli.so
+7fc045beb000-7fc045bec000 r--p 0000d000 103:03 140232122                 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/lib/amd64/jli/libjli.so
+7fc045bec000-7fc045bed000 rw-p 0000e000 103:03 140232122                 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64/lib/amd64/jli/libjli.so
+7fc045bed000-7fc045c02000 r-xp 00000000 103:03 134375571                 /usr/lib64/libz.so.1.2.7
+7fc045c02000-7fc045e01000 ---p 00015000 103:03 134375571                 /usr/lib64/libz.so.1.2.7
+7fc045e01000-7fc045e02000 r--p 00014000 103:03 134375571                 /usr/lib64/libz.so.1.2.7
+7fc045e02000-7fc045e03000 rw-p 00015000 103:03 134375571                 /usr/lib64/libz.so.1.2.7
+7fc045e03000-7fc045e1a000 r-xp 00000000 103:03 134475977                 /usr/lib64/libpthread-2.17.so
+7fc045e1a000-7fc046019000 ---p 00017000 103:03 134475977                 /usr/lib64/libpthread-2.17.so
+7fc046019000-7fc04601a000 r--p 00016000 103:03 134475977                 /usr/lib64/libpthread-2.17.so
+7fc04601a000-7fc04601b000 rw-p 00017000 103:03 134475977                 /usr/lib64/libpthread-2.17.so
+7fc04601b000-7fc04601f000 rw-p 00000000 00:00 0 
+7fc04601f000-7fc046041000 r-xp 00000000 103:03 134375414                 /usr/lib64/ld-2.17.so
+7fc0460ca000-7fc04610b000 rw-p 00000000 00:00 0 
+7fc04610b000-7fc04610f000 ---p 00000000 00:00 0 
+7fc04610f000-7fc046211000 rw-p 00000000 00:00 0 
+7fc046232000-7fc046235000 rw-p 00000000 00:00 0 
+7fc046235000-7fc04623d000 rw-s 00000000 103:03 145418226                 /tmp/hsperfdata_chyin/27899
+7fc04623d000-7fc04623e000 rw-p 00000000 00:00 0 
+7fc04623e000-7fc04623f000 r--p 00000000 00:00 0 
+7fc04623f000-7fc046240000 rw-p 00000000 00:00 0 
+7fc046240000-7fc046241000 r--p 00021000 103:03 134375414                 /usr/lib64/ld-2.17.so
+7fc046241000-7fc046242000 rw-p 00022000 103:03 134375414                 /usr/lib64/ld-2.17.so
+7fc046242000-7fc046243000 rw-p 00000000 00:00 0 
+7ffcade3b000-7ffcade5d000 rw-p 00000000 00:00 0                          [stack]
+7ffcadfdd000-7ffcadfdf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: lab8.Lab8 input.txt output.txt
+java_class_path (initial): /DCNFS/users/student/chyin/COEN160/lab8/lab8/bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/opt/eclipse-4.4/linux/eclipse:/opt/synopsys-2019/app/syn/Q-2019.12-SP1/bin:/opt/synopsys-2019/app/txs/Q-2019.12-SP1/bin:/opt/synopsys-2019/app/customcompiler/P-2019.06-SP1-7/bin:/opt/synopsys-2019/app/finesim/P-2019.06-SP2-4/bin:/opt/synopsys-2019/app/hspice/P-2019.06-SP2-3/hspice/bin:/opt/synopsys-2019/app/icc/Q-2019.12-SP1/bin:/opt/synopsys-2019/app/icvalidator/Q-2019.12-SP1-1/bin:/opt/synopsys-2019/app/idq/Q-2019.12-SP1/bin:/opt/synopsys-2019/app/starrc/Q-2019.12-SP1-1/bin:/opt/synopsys-2019/app/vcs/P-2019.06-SP2-1/bin:/opt/synopsys-2019/app/wv/P-2019.06-SP2/bin:/opt/synopsys-2019/app/xa/P-2019.06-SP5/bin:/opt/synopsys-2019/app/sentaurus/Q_2019.12-SP1a/bin:/opt/synopsys-2019/app/sentaurus/Q_2019.12-SP1a/tcad/Q-2019.12-SP1a/linux64/bin:/usr/lib64/qt-3.3/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+USERNAME=chyin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xb6a5c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xb6a5c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x93fe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x93fe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x93fe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x93fe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x93ff80], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS Linux release 7.9.2009 (Core)
+
+uname:Linux 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 1024, NOFILE 4096, AS infinity
+load average:1.13 0.52 0.32
+
+/proc/meminfo:
+MemTotal:       65695408 kB
+MemFree:        56287708 kB
+MemAvailable:   59396688 kB
+Buffers:            5196 kB
+Cached:          3030504 kB
+SwapCached:            0 kB
+Active:          5434812 kB
+Inactive:        1649220 kB
+Active(anon):    4051160 kB
+Inactive(anon):    81584 kB
+Active(file):    1383652 kB
+Inactive(file):  1567636 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097148 kB
+Dirty:              2628 kB
+Writeback:             0 kB
+AnonPages:       4046676 kB
+Mapped:           781348 kB
+Shmem:             84412 kB
+Slab:             903184 kB
+SReclaimable:     694656 kB
+SUnreclaim:       208528 kB
+KernelStack:       22656 kB
+PageTables:        66652 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    34944852 kB
+Committed_AS:   14528968 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      440060 kB
+VmallocChunk:   34358945788 kB
+Percpu:             4736 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1323008 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      583116 kB
+DirectMap2M:    20107264 kB
+DirectMap1G:    46137344 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-15
+cpu_memory_nodes: 0
+active_processor_count: 16
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 5455982592
+memory_max_usage_in_bytes: 5518737408
+
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 167 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3013.610
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 8
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 2907.867
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 1
+cpu cores	: 8
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 1801.605
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 2
+cpu cores	: 8
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3917.388
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 3
+cpu cores	: 8
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 1963.806
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 8
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3458.404
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 5
+cpu cores	: 8
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 2370.300
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 6
+cpu cores	: 8
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3193.511
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 7
+cpu cores	: 8
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 4076.995
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 8
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 1002.197
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 1
+cpu cores	: 8
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 2490.692
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 2
+cpu cores	: 8
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 2597.045
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 3
+cpu cores	: 8
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3387.451
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 8
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 1127.624
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 5
+cpu cores	: 8
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 3860.168
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 6
+cpu cores	: 8
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+stepping	: 1
+microcode	: 0x59
+cpu MHz		: 2672.729
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 7
+cpu cores	: 8
+apicid		: 15
+initial apicid	: 15
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 65695408k(56287708k free), swap 2097148k(2097148k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.382-b05) for linux-amd64 JRE (1.8.0_382-b05), built on Aug 11 2023 14:25:59 by "mockbuild" with gcc 4.8.5 20150623 (Red Hat 4.8.5-44)
+
+time: Mon Nov 27 14:59:29 2023
+timezone: PST
+elapsed time: 0.017364 seconds (0d 0h 0m 0s)
+

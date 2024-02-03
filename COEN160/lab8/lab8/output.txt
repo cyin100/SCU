@@ -1,0 +1,5 @@
+Line 1 No. of words: 5
+Line 2 No. of words: 4
+Line 3 No. of words: 2
+Line 4 No. of words: 2
+Line 5 No. of words: 3
